@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Contact } from '../../models/contact.class';
+import BtnstatusComponent from './btnstatus';
 
 const ContactComponent = ({ contact }) => {
     return (
@@ -14,9 +15,9 @@ const ContactComponent = ({ contact }) => {
             <h4>
                 Email: {contact.email}
             </h4>
-            <h5>
-                User is {contact.conected ? 'ONLINE' : 'OFFLINE'}
-            </h5>
+            <BtnstatusComponent status={contact.conected}></BtnstatusComponent>
+
+
         </div>
     );
 };
